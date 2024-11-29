@@ -1,0 +1,1 @@
+# yasuke-static
