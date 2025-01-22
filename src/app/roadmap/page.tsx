@@ -22,7 +22,7 @@ export default function Roadmap() {
                 Roadmap
               </h1>
               <p className="text-center text-zinc-400 mb-12">
-                Our roadmap is built on a commitment to continuous development and innovation. We're dedicated to enhancing our platform with new features, network integrations, and security upgrades, ensuring a cutting-edge trading experience.
+                Our roadmap is built on a commitment to continuous development and innovation. We&apos;re dedicated to enhancing our platform with new features, network integrations, and security upgrades, ensuring a cutting-edge trading experience.
               </p>
 
               <div className="glass-dark rounded-2xl p-8 space-y-12">

@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
 import TradingViewWidget from "@/components/trading-view-widget"
-import { Countdown } from "@/components/countdown"
+
 import { NewListings } from "@/components/new-listings"
 import { LivePriceTicker } from "@/components/live-price-ticker"
 import { MarketOverview } from "@/components/market-overview"
@@ -257,7 +257,7 @@ export default function Home() {
                       <div className="relative h-full space-y-6 rounded-xl glass p-6">
                         <h3 className="text-2xl font-bold">Token Utility</h3>
                         <p className="text-zinc-400">
-                          The YAS token is designed to offer secure, transparent and innovative trading solutions. It's an integral part of the YASUKE ecosystem, providing holders with exclusive benefits and opportunities.
+                          The YAS token is designed to offer secure, transparent and innovative trading solutions. It&apos;s an integral part of the YASUKE ecosystem, providing holders with exclusive benefits and opportunities.
                         </p>
                         <div className="pt-4">
                           <Button variant="outline" size="lg" className="w-full group relative overflow-hidden" asChild>
@@ -301,7 +301,7 @@ export default function Home() {
                     YASUKE is a digital asset trading platform that aims to redefine crypto market standards. With its native token, the YAS, YASUKE offers a unique trading experience, optimized for security, transparency and efficiency.
                   </p>
                   <p className="text-zinc-400">
-                    Whether you're an active trader in the crypto world or an investor from a traditional financial background, our exchange meets your needs with an intuitive interface, advanced trading tools and competitive fees.
+                    Whether you&apos;re an active trader in the crypto world or an investor from a traditional financial background, our exchange meets your needs with an intuitive interface, advanced trading tools and competitive fees.
                   </p>
                 </div>
               </div>
@@ -378,7 +378,7 @@ export default function Home() {
           <div className="mx-auto max-w-[980px] text-center">
             <h2 className="text-3xl font-bold mb-4">Join the Crypto Trading Revolution</h2>
             <p className="text-xl mb-6 text-zinc-200">
-              Sign up today and take advantage of YASUKE's exclusive benefits before the official launch of our exchange in 2025.
+            Sign up today and take advantage of YASUKE&apos;s exclusive benefits before the official launch of our exchange in 2025.
             </p>
             <Button 
               size="lg" 

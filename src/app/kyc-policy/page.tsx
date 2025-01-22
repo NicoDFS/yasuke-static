@@ -27,7 +27,7 @@ export default function KYCPolicy() {
                 <section className="space-y-4">
                   <h2 className="text-2xl font-bold gradient-text">Introduction</h2>
                   <p className="text-zinc-400">
-                    The objective of Yasuke's Anti-Money Laundering (AML), Counter-Terrorism Financing (CTF), and Know Your Customer (KYC) Policy (hereinafter referred to as the 'AML/CTF Policy') is to identify, prevent, and mitigate potential risks of the Yasuke cryptocurrency exchange platform being involved in any illegal, fraudulent, or otherwise prohibited activities in applicable jurisdictions.
+                    The objective of Yasuke&apos;s Anti-Money Laundering (AML), Counter-Terrorism Financing (CTF), and Know Your Customer (KYC) Policy (hereinafter referred to as &apos;the AML/CTF Policy&apos;) is to identify, prevent, and mitigate potential risks of the Yasuke cryptocurrency exchange platform being involved in any illegal, fraudulent, or otherwise prohibited activities in applicable jurisdictions.
                   </p>
                   <p className="text-zinc-400">
                     Yasuke is committed to strictly adhering to laws and regulations related to KYC, AML, and CTF, affirming its dedication to avoiding any intentional violations of these policies. Yasuke will implement necessary measures and technologies to provide secure services, thereby maximizing protection against financial losses due to money laundering.
@@ -38,7 +38,7 @@ export default function KYCPolicy() {
                 <section className="space-y-4">
                   <h2 className="text-2xl font-bold gradient-text">KYC and AML Framework</h2>
                   <p className="text-zinc-400">
-                    Yasuke's KYC and AML/CTF policies constitute a comprehensive framework that complies with international standards and jurisdiction-specific regulations. Through a robust compliance infrastructure, Yasuke ensures strict adherence to regulatory requirements and standards at both local and international levels.
+                    Yasuke&apos;s KYC and AML/CTF policies constitute a comprehensive framework that complies with international standards and jurisdiction-specific regulations. Through a robust compliance infrastructure, Yasuke ensures strict adherence to regulatory requirements and standards at both local and international levels.
                   </p>
                 </section>
 
@@ -47,7 +47,7 @@ export default function KYCPolicy() {
                   <h2 className="text-2xl font-bold gradient-text">Key Measures</h2>
                   <ol className="list-decimal list-inside space-y-3 text-zinc-400 pl-4">
                     <li>Mandatory KYC (Know Your Customer) and KYB (Know Your Business) verification, including the identification of customers (individuals or entities), beneficial owners (if applicable), and the nature and purpose of the business relationship.</li>
-                    <li>Continuous monitoring of user-initiated transactions to detect fraudulent behavior and/or criminal activities. The intensity of monitoring is adjusted based on the user's or transaction's risk profile. A Suspicious Activity Report (SAR) must be filed with the relevant authorities when a user's operation is suspected of being linked to criminal activity, fraudulent behavior, etc.</li>
+                    <li>Continuous monitoring of user-initiated transactions to detect fraudulent behavior and/or criminal activities. The intensity of monitoring is adjusted based on the user&apos;s or transaction&apos;s risk profile. A Suspicious Activity Report (SAR) must be filed with the relevant authorities when a user&apos;s operation is suspected of being linked to criminal activity, fraudulent behavior, etc.</li>
                   </ol>
                 </section>
 
@@ -88,7 +88,7 @@ export default function KYCPolicy() {
                 <section className="space-y-4">
                   <h2 className="text-2xl font-bold gradient-text">Conclusion</h2>
                   <p className="text-zinc-400">
-                    This AML/CTF Policy is effective as of the date of publication on our website and will remain in effect unless future amendments are made. Yasuke reserves the right to update and/or modify the terms of this policy, and it is the user's responsibility to monitor relevant updates to this document.
+                    This AML/CTF Policy is effective as of the date of publication on our website and will remain in effect unless future amendments are made. Yasuke reserves the right to update and/or modify the terms of this policy, and it is the user&apos;s responsibility to monitor relevant updates to this document.
                   </p>
                 </section>
               </div>

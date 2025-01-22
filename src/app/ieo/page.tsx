@@ -23,7 +23,7 @@ export default function IEO() {
                 Initial Exchange Offering
               </h1>
               <p className="text-center text-zinc-400 mb-12">
-                Launch your token through Yasuke's IEO platform. Benefit from our established user base, secure infrastructure, and marketing support.
+                Launch your token through Yasuke&apos;s IEO platform. Benefit from our established user base, secure infrastructure, and marketing support.
               </p>
 
               <div className="glass-dark rounded-2xl p-8 space-y-8">

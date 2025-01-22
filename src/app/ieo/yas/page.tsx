@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { SiteHeader } from "@/components/site-header"
 import { Button } from "@/components/ui/button"
 import { FileText, Download, Globe2 } from "lucide-react"
@@ -18,9 +19,11 @@ export default function YASTokenDetails() {
             {/* Token Info */}
             <div className="w-full md:w-2/3">
               <div className="flex items-center gap-4 mb-6">
-                <img
+                <Image
                   src="/images/yas-token.png"
                   alt="YAS Token"
+                  width={64}
+                  height={64}
                   className="w-16 h-16"
                 />
                 <div>
@@ -61,7 +64,7 @@ export default function YASTokenDetails() {
                     security, transparency and efficiency.
                   </p>
                   <p>
-                    Whether you're an active trader in the crypto world or an investor from a traditional 
+                    Whether you&apos;re an active trader in the crypto world or an investor from a traditional 
                     financial background, our exchange meets your needs with an intuitive interface, 
                     advanced trading tools and competitive fees.
                   </p>

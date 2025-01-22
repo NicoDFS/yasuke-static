@@ -27,10 +27,10 @@ export default function Privacy() {
                 <section className="space-y-4">
                   <h2 className="text-2xl font-bold gradient-text">Introduction</h2>
                   <p className="text-zinc-400">
-                    This Privacy Policy governs how Yasuke (hereinafter referred to as 'Yasuke', 'we', or 'us') collects, uses, processes, stores, and discloses information collected from users of our website www.yasuke.exchange (the 'Site') to provide the services available on it (the 'Services').
+                    This Privacy Policy governs how Yasuke (hereinafter referred to as &apos;Yasuke&apos;, &apos;we&apos;, or &apos;us&apos;) collects, uses, processes, stores, and discloses information collected from users of our website https://yasuke.exchange (the &apos;Site&apos;) to provide the services available on it (the &apos;Services&apos;).
                   </p>
                   <p className="text-zinc-400">
-                    We strictly adhere to the requirements of the European Union's General Data Protection Regulation (GDPR), the ePrivacy Directive, and the Data Protection Act, ensuring compliance with regulations applicable in the European Economic Area (EEA) regarding the processing of personal information.
+                    We strictly adhere to the requirements of the European Union&apos;s General Data Protection Regulation (GDPR), the ePrivacy Directive, and the Data Protection Act, ensuring compliance with regulations applicable in the European Economic Area (EEA) regarding the processing of personal information.
                   </p>
                 </section>
 

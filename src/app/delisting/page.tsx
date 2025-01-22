@@ -74,7 +74,7 @@ export default function Delisting() {
                   <div className="space-y-4">
                     <h3 className="text-xl font-semibold text-zinc-200">4.3 Security Risks</h3>
                     <ul className="list-disc list-inside space-y-2 text-zinc-400 pl-4">
-                      <li>The asset presents technical vulnerabilities or security flaws that endanger user funds or Yasuke's infrastructure.</li>
+                      <li>The asset presents technical vulnerabilities or security flaws that endanger user funds or Yasuke&apos;s infrastructure.</li>
                     </ul>
                   </div>
                 </section>
@@ -83,7 +83,7 @@ export default function Delisting() {
                 <section className="space-y-4">
                   <h2 className="text-2xl font-bold gradient-text">5. Risk Assessment Procedures</h2>
                   <p className="text-zinc-400">
-                    Yasuke conducts periodic risk assessments to evaluate the performance and compliance of listed digital assets. These assessments involve consultations with legal, technical, and compliance experts to identify potential risks and ensure the platform's integrity.
+                    Yasuke conducts periodic risk assessments to evaluate the performance and compliance of listed digital assets. These assessments involve consultations with legal, technical, and compliance experts to identify potential risks and ensure the platform&apos;s integrity.
                   </p>
                 </section>
 
@@ -134,7 +134,7 @@ export default function Delisting() {
                 <section className="space-y-4">
                   <h2 className="text-2xl font-bold gradient-text">9. Communication</h2>
                   <p className="text-zinc-400">
-                    All delisting decisions are communicated through Yasuke's website, mobile applications, and official channels (e.g., emails, push notifications). Yasuke provides explanations for delisting decisions in public announcements, unless restricted by legal or security considerations.
+                    All delisting decisions are communicated through Yasuke&apos;s website, mobile applications, and official channels (e.g., emails, push notifications). Yasuke provides explanations for delisting decisions in public announcements, unless restricted by legal or security considerations.
                   </p>
                 </section>
 
@@ -150,7 +150,7 @@ export default function Delisting() {
                 <section className="space-y-4">
                   <h2 className="text-2xl font-bold gradient-text">11. Contact</h2>
                   <p className="text-zinc-400">
-                    For questions regarding this policy or to report a high-risk asset, please contact Yasuke's support team:
+                    For questions regarding this policy or to report a high-risk asset, please contact Yasuke&apos;s support team:
                   </p>
                   <p className="text-zinc-400">
                     Email: <a href="mailto:legal@yasuke.exchange" className="text-blue-400 hover:text-blue-300">legal@yasuke.exchange</a>

@@ -98,7 +98,7 @@ export default function AboutPage() {
               <div className="p-8 rounded-lg bg-[#1d1e24]/50 backdrop-blur border border-zinc-800/50">
                 <h2 className="text-2xl font-bold mb-6 text-zinc-100">Learn More</h2>
                 <p className="text-zinc-300 mb-6">
-                  Download our whitepaper to learn more about YASUKE Exchange's vision, technology, 
+                  Download our whitepaper to learn more about YASUKE Exchange&apos;s vision, technology, 
                   and roadmap for the future of digital asset trading.
                 </p>
                 <div className="flex flex-wrap gap-4">

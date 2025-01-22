@@ -11,11 +11,37 @@ const marketDataSchema = z.object({
 
 export type MarketData = z.infer<typeof marketDataSchema>
 
+interface RawMarketData {
+  price?: string | number
+  last_price?: string | number
+  price_24h?: string | number
+  price_change_percent?: string | number
+  percent_change?: string | number
+  change?: string | number
+  volume?: string | number
+  high?: string | number
+  high_24hr?: string | number
+  low?: string | number
+  low_24hr?: string | number
+}
+
+interface PairsData {
+  [key: string]: RawMarketData
+}
+
 const BASE_URL = 'https://yasuke.exchange/api/v1'
+
+// Helper function to safely convert string or number to number
+function toNumber(value: string | number | undefined): number {
+  if (typeof value === 'undefined') return 0
+  if (typeof value === 'number') return value
+  const num = Number(value)
+  return isNaN(num) ? 0 : num
+}
 
 // Add retry logic for API calls
 async function fetchWithRetry(url: string, retries = 3): Promise<Response> {
-  console.log('Fetching data from:', url) // Debug log
+  console.log('Fetching data from:', url)
   
   for (let i = 0; i < retries; i++) {
     try {
@@ -26,7 +52,6 @@ async function fetchWithRetry(url: string, retries = 3): Promise<Response> {
         }
       })
       
-      // Log response status
       console.log('Response status:', response.status)
       
       if (response.ok) {
@@ -35,7 +60,6 @@ async function fetchWithRetry(url: string, retries = 3): Promise<Response> {
         return response
       }
       
-      // If not ok, log the error response
       const errorText = await response.text()
       console.error('Error response:', errorText)
       
@@ -52,27 +76,21 @@ async function fetchWithRetry(url: string, retries = 3): Promise<Response> {
 function formatNumber(value: number | string | null | undefined, isPrice = false, isPercentage = false): string {
   if (value === null || value === undefined) return isPrice ? '$0.00' : isPercentage ? '0.00%' : '0'
   
-  // Clean the input value - remove any existing $ and convert to number
   const cleanValue = typeof value === 'string' ? value.replace(/[$,]/g, '') : value.toString()
   const num = parseFloat(cleanValue)
   if (isNaN(num)) return isPrice ? '$0.00' : isPercentage ? '0.00%' : '0'
   
   if (isPrice) {
-    // Handle different price ranges
     if (num >= 1) {
-      // For prices >= 1, show 2 decimal places with commas
       return `$${num.toLocaleString('en-US', { 
         minimumFractionDigits: 2,
         maximumFractionDigits: 2 
       })}`
     } else if (num >= 0.01) {
-      // For prices between 0.01 and 1, show 4 decimal places
       return `$${num.toFixed(4)}`
     } else if (num >= 0.0001) {
-      // For prices between 0.0001 and 0.01, show 6 decimal places
       return `$${num.toFixed(6)}`
     } else if (num > 0) {
-      // For very small prices > 0, show up to 8 decimal places
       return `$${num.toFixed(8)}`
     } else {
       return '$0.00'
@@ -80,11 +98,9 @@ function formatNumber(value: number | string | null | undefined, isPrice = false
   }
   
   if (isPercentage) {
-    // Format percentage with 2 decimal places
     return `${num.toFixed(2)}%`
   }
   
-  // Format volume with commas and 2 decimal places
   return num.toLocaleString('en-US', { 
     minimumFractionDigits: 2,
     maximumFractionDigits: 2
@@ -95,32 +111,26 @@ export async function getMarketData(): Promise<MarketData[]> {
   try {
     const response = await fetchWithRetry(`${BASE_URL}/home-page/`)
     const data = await response.json()
-    console.log('Received market data:', data) // Debug log
+    console.log('Received market data:', data)
     
-    // Extract pairs_data from the response
-    const pairs_data = data.pairs_data || {}
+    const pairs_data = (data.pairs_data || {}) as PairsData
     
-    // Transform pairs_data into our MarketData format
-    const marketData = Object.entries(pairs_data).map(([symbol, data]: [string, any]) => {
-      // Log the raw data for debugging
+    const marketData = Object.entries(pairs_data).map(([symbol, data]) => {
       console.log(`Raw data for ${symbol}:`, data)
       
-      // Get the raw price and change values
-      const rawPrice = data.price || data.last_price || 0
+      const rawPrice = toNumber(data.price || data.last_price || 0)
       
-      // Handle 24h change data - check all possible field names and formats
       let rawChange = 0
       if (data.price_24h !== undefined) {
-        rawChange = parseFloat(data.price_24h)
+        rawChange = toNumber(data.price_24h)
       } else if (data.price_change_percent !== undefined) {
-        rawChange = parseFloat(data.price_change_percent)
+        rawChange = toNumber(data.price_change_percent)
       } else if (data.percent_change !== undefined) {
-        rawChange = parseFloat(data.percent_change)
+        rawChange = toNumber(data.percent_change)
       } else if (data.change !== undefined) {
-        rawChange = parseFloat(data.change)
+        rawChange = toNumber(data.change)
       }
       
-      // Log the extracted change value
       console.log(`Extracted change for ${symbol}:`, rawChange)
       
       return {
@@ -133,7 +143,6 @@ export async function getMarketData(): Promise<MarketData[]> {
       }
     })
     
-    // Filter out any malformed data
     const validData = z.array(marketDataSchema).safeParse(marketData)
     if (!validData.success) {
       console.error('Invalid market data format:', validData.error)
@@ -152,28 +161,25 @@ export async function getMarketDataForSymbol(symbol: string): Promise<MarketData
     const formattedSymbol = symbol.replace('/', '-')
     const response = await fetchWithRetry(`${BASE_URL}/home-page/`)
     const data = await response.json()
-    console.log(`Received data for ${formattedSymbol}:`, data) // Debug log
+    console.log(`Received data for ${formattedSymbol}:`, data)
     
-    // Extract the specific pair data
-    const pairData = data.pairs_data?.[formattedSymbol.replace('-', '/')] || null
+    const pairs_data = (data.pairs_data || {}) as PairsData
+    const pairData = pairs_data[formattedSymbol.replace('-', '/')] || null
     if (!pairData) return null
     
-    // Get the raw price and change values
-    const rawPrice = pairData.price || pairData.last_price || 0
+    const rawPrice = toNumber(pairData.price || pairData.last_price || 0)
     
-    // Handle 24h change data - check all possible field names and formats
     let rawChange = 0
     if (pairData.price_24h !== undefined) {
-      rawChange = parseFloat(pairData.price_24h)
+      rawChange = toNumber(pairData.price_24h)
     } else if (pairData.price_change_percent !== undefined) {
-      rawChange = parseFloat(pairData.price_change_percent)
+      rawChange = toNumber(pairData.price_change_percent)
     } else if (pairData.percent_change !== undefined) {
-      rawChange = parseFloat(pairData.percent_change)
+      rawChange = toNumber(pairData.percent_change)
     } else if (pairData.change !== undefined) {
-      rawChange = parseFloat(pairData.change)
+      rawChange = toNumber(pairData.change)
     }
     
-    // Log the extracted change value
     console.log(`Extracted change for ${formattedSymbol}:`, rawChange)
     
     const marketData = {

@@ -26,24 +26,27 @@ function TradingViewWidget() {
         "support_host": "https://www.tradingview.com"
       }`
     
+    // Store container.current in a variable to avoid the exhaustive deps warning
+    const currentContainer = container.current
+    
     // Clean up any existing scripts first
-    if (container.current) {
-      const existingScript = container.current.querySelector('script')
+    if (currentContainer) {
+      const existingScript = currentContainer.querySelector('script')
       if (existingScript) {
-        container.current.removeChild(existingScript)
+        currentContainer.removeChild(existingScript)
       }
     }
     
     // Add the new script
-    if (container.current) {
-      container.current.appendChild(script)
+    if (currentContainer) {
+      currentContainer.appendChild(script)
     }
 
     return () => {
-      if (container.current) {
-        const scriptElement = container.current.querySelector('script')
+      if (currentContainer) {
+        const scriptElement = currentContainer.querySelector('script')
         if (scriptElement) {
-          container.current.removeChild(scriptElement)
+          currentContainer.removeChild(scriptElement)
         }
       }
     }

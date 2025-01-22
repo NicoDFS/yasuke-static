@@ -35,7 +35,7 @@ export default function ComingSoon() {
                 </h1>
                 
                 <p className="text-xl text-zinc-400 max-w-[600px] mx-auto">
-                  We're working hard to bring you this exciting new feature. Follow us on social media for the latest updates and be the first to know when it launches.
+                  We&apos;re working hard to bring you this exciting new feature. Follow us on social media for the latest updates and be the first to know when it launches.
                 </p>
 
                 <div className="flex justify-center gap-6">

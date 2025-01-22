@@ -28,10 +28,10 @@ export default function Terms() {
                 <section className="space-y-4">
                   <h2 className="text-2xl font-bold gradient-text">1. Introduction</h2>
                   <p className="text-zinc-400">
-                    By accessing, browsing, or using the Yasuke website (www.yasuke.exchange) or by creating an account on the Yasuke platform, you agree to comply with the terms and conditions of this User Agreement (hereinafter referred to as the "Agreement"). This Agreement constitutes a legally binding contract between you (hereinafter "User") and Yasuke (operated by Kalyssi Europe s.r.o, Kalyssi OÜ, and other affiliated entities).
+                    By accessing, browsing, or using the Yasuke website (www.yasuke.exchange) or by creating an account on the Yasuke platform, you agree to comply with the terms and conditions of this User Agreement (hereinafter referred to as the &apos;Agreement&apos;). This Agreement constitutes a legally binding contract between you (hereinafter &apos;User&apos;) and Yasuke (operated by Kalyssi Europe s.r.o, Kalyssi OÜ, and other affiliated entities).
                   </p>
                   <p className="text-zinc-400">
-                    Please read this Agreement carefully before using Yasuke's services. If you do not accept the terms of this Agreement, you must neither access the website nor use Yasuke's services.
+                    Please read this Agreement carefully before using Yasuke&apos;s services. If you do not accept the terms of this Agreement, you must neither access the website nor use Yasuke&apos;s services.
                   </p>
                 </section>
 
@@ -41,7 +41,7 @@ export default function Terms() {
                   <ul className="space-y-2 text-zinc-400">
                     <li><strong className="text-zinc-200">Digital Assets:</strong> Cryptocurrencies or tokens (e.g., BTC, ETH, USDT) exchanged on the Yasuke platform.</li>
                     <li><strong className="text-zinc-200">Account:</strong> A personal or professional account created by the User on the Yasuke platform.</li>
-                    <li><strong className="text-zinc-200">Platform:</strong> Yasuke's digital tools allowing the exchange, storage, or management of digital assets.</li>
+                    <li><strong className="text-zinc-200">Platform:</strong> Yasuke&apos;s digital tools allowing the exchange, storage, or management of digital assets.</li>
                     <li><strong className="text-zinc-200">Fees:</strong> Charges applied by Yasuke for using its services.</li>
                     <li><strong className="text-zinc-200">User:</strong> Any individual or entity accessing the Yasuke platform or using its services.</li>
                   </ul>
@@ -66,7 +66,7 @@ export default function Terms() {
                   <div className="space-y-4">
                     <h3 className="text-xl font-semibold text-zinc-200">4.1 Eligibility</h3>
                     <p className="text-zinc-400">
-                      Yasuke's services are exclusively available to users aged 18 years or older. You must also ensure that the use of Yasuke's services is authorized in your country of residence.
+                      Yasuke&apos;s services are exclusively available to users aged 18 years or older. You must also ensure that the use of Yasuke&apos;s services is authorized in your country of residence.
                     </p>
                   </div>
 
@@ -80,7 +80,7 @@ export default function Terms() {
                   <div className="space-y-4">
                     <h3 className="text-xl font-semibold text-zinc-200">4.3 Compliance with Local Laws</h3>
                     <p className="text-zinc-400">
-                      Users are responsible for complying with local laws regarding the use of digital assets and Yasuke's services.
+                      Users are responsible for complying with local laws regarding the use of digital assets and Yasuke&apos;s services.
                     </p>
                   </div>
 
@@ -125,7 +125,7 @@ export default function Terms() {
                   <div className="space-y-4">
                     <h3 className="text-xl font-semibold text-zinc-200">6.2 Refund of Unused Funds</h3>
                     <p className="text-zinc-400">
-                      Deposits not used for transactions may be withdrawn in accordance with the platform's conditions.
+                      Deposits not used for transactions may be withdrawn in accordance with the platform&apos;s conditions.
                     </p>
                   </div>
 
@@ -163,7 +163,7 @@ export default function Terms() {
                   <div className="space-y-4">
                     <h3 className="text-xl font-semibold text-zinc-200">8.1 Prohibited Activities</h3>
                     <p className="text-zinc-400">
-                      Using Yasuke's services for illegal activities (e.g., money laundering, terrorism financing, fraud) is strictly prohibited.
+                      Using Yasuke&apos;s services for illegal activities (e.g., money laundering, terrorism financing, fraud) is strictly prohibited.
                     </p>
                   </div>
 
@@ -217,7 +217,7 @@ export default function Terms() {
                 <section className="space-y-4">
                   <h2 className="text-2xl font-bold gradient-text">11. Amendments to the Agreement</h2>
                   <p className="text-zinc-400">
-                    Yasuke reserves the right to amend this Agreement at any time. Any amendments will be communicated through the website, and continued use of Yasuke's services will constitute acceptance of the revised terms.
+                    Yasuke reserves the right to amend this Agreement at any time. Any amendments will be communicated through the website, and continued use of Yasuke&apos;s services will constitute acceptance of the revised terms.
                   </p>
                 </section>
 

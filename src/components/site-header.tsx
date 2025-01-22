@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { MainNav } from "@/components/main-nav"
 import { Button } from "@/components/ui/button"
 import {
@@ -29,9 +30,12 @@ export function SiteHeader() {
         <Link href="/" className="mr-8 group">
           <div className="relative">
             <div className="absolute -inset-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur opacity-0 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
-            <img
+            <Image
               src="/images/yasuke-logo.png"
               alt="Yasuke Exchange"
+              width={246}
+              height={82}
+              priority
               className="relative h-[82px] w-auto"
             />
           </div>
