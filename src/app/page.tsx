@@ -4,6 +4,9 @@ import Link from "next/link"
 import Image from "next/image"
 import TradingViewWidget from "@/components/trading-view-widget"
 import { Countdown } from "@/components/countdown"
+import { NewListings } from "@/components/new-listings"
+import { LivePriceTicker } from "@/components/live-price-ticker"
+import { MarketOverview } from "@/components/market-overview"
 
 export default function Home() {
   return (
@@ -63,185 +66,50 @@ export default function Home() {
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-3">
                     <Image
-                      src="/images/yas-token.png"
-                      alt="YAS Token"
+                      src="/images/crypto-icons/yas.png"
+                      alt="YAS"
                       width={40}
                       height={40}
                       className="rounded-full"
                     />
                     <div>
-                      <h3 className="font-bold">YAS Token</h3>
-                      <p className="text-sm text-zinc-400">Initial Exchange Offering</p>
+                      <div className="flex items-center gap-2">
+                        <h4 className="font-bold">YASUKE IEO</h4>
+                        <span className="px-2 py-0.5 text-xs font-medium bg-blue-500/20 text-blue-500 rounded-full">Coming Soon</span>
+                      </div>
+                      <p className="text-sm text-zinc-400">YAS/USDT</p>
                     </div>
                   </div>
-                  <span className="px-3 py-1 text-xs font-medium bg-blue-500/20 text-blue-500 rounded-full">IEO</span>
                 </div>
                 <div className="space-y-4">
                   <div className="flex justify-between text-sm">
-                    <span className="text-zinc-400">Price</span>
-                    <span className="font-medium">$0.95 USDT</span>
+                    <span className="text-zinc-400">Initial Price</span>
+                    <span className="font-medium">$0.95</span>
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-zinc-400">Total Supply</span>
-                    <span className="font-medium">21,000,000 YAS</span>
+                    <span className="font-medium">21,000,000</span>
                   </div>
-                  <Countdown />
+                  <div className="flex justify-between text-sm">
+                    <span className="text-zinc-400">Initial Distribution</span>
+                    <span className="font-medium">20%</span>
+                  </div>
                   <Button className="w-full bg-[#1d1e24] text-zinc-100 hover:bg-[#1d1e24]/80" asChild>
-                    <Link href="/ieo/yas">View Details</Link>
+                    <Link href="/ieo/yas">Learn More</Link>
                   </Button>
                 </div>
               </div>
             </div>
 
-            {/* KLC Listing */}
-            <div className="group relative col-span-1">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
-              <div className="relative glass-dark rounded-2xl p-6 h-full">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-3">
-                    <Image
-                      src="/images/crypto-icons/klc.png"
-                      alt="KLC"
-                      width={40}
-                      height={40}
-                      className="rounded-full"
-                    />
-                    <div>
-                      <div className="flex items-center gap-2">
-                        <h4 className="font-bold">KalyChain</h4>
-                        <span className="px-2 py-0.5 text-xs font-medium bg-green-500/20 text-green-500 rounded-full">New</span>
-                      </div>
-                      <p className="text-sm text-zinc-400">KLC/USDT</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="space-y-4">
-                  <div className="flex justify-between text-sm">
-                    <span className="text-zinc-400">Price</span>
-                    <span className="font-medium">$1.85</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-zinc-400">24h Change</span>
-                    <span className="font-medium text-green-500">+5.67%</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-zinc-400">24h Volume</span>
-                    <span className="font-medium">$12.4M</span>
-                  </div>
-                  <Button className="w-full bg-[#1d1e24] text-zinc-100 hover:bg-[#1d1e24]/80" asChild>
-                    <Link href="/account/trade/KLC-USDT">Trade Now</Link>
-                  </Button>
-                </div>
-              </div>
-            </div>
-
-            {/* KSWAP Listing */}
-            <div className="group relative col-span-1">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
-              <div className="relative glass-dark rounded-2xl p-6 h-full">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-3">
-                    <Image
-                      src="/images/crypto-icons/kswap.png"
-                      alt="KSWAP"
-                      width={40}
-                      height={40}
-                      className="rounded-full"
-                    />
-                    <div>
-                      <div className="flex items-center gap-2">
-                        <h4 className="font-bold">KalySwap</h4>
-                        <span className="px-2 py-0.5 text-xs font-medium bg-green-500/20 text-green-500 rounded-full">New</span>
-                      </div>
-                      <p className="text-sm text-zinc-400">KSWAP/USDT</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="space-y-4">
-                  <div className="flex justify-between text-sm">
-                    <span className="text-zinc-400">Price</span>
-                    <span className="font-medium">$2.15</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-zinc-400">24h Change</span>
-                    <span className="font-medium text-red-500">-0.85%</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-zinc-400">24h Volume</span>
-                    <span className="font-medium">$8.7M</span>
-                  </div>
-                  <Button className="w-full bg-[#1d1e24] text-zinc-100 hover:bg-[#1d1e24]/80" asChild>
-                    <Link href="/account/trade/KSWAP-USDT">Trade Now</Link>
-                  </Button>
-                </div>
-              </div>
+            {/* New Listings */}
+            <div className="col-span-2">
+              <NewListings />
             </div>
           </div>
         </section>
 
         {/* Live Price Ticker */}
-        <div className="w-full overflow-hidden bg-[#0a0b0f]/80 border-y border-zinc-800/50 py-2">
-          <div className="flex justify-end">
-            <div className="flex animate-ticker whitespace-nowrap">
-              {[
-                // First set
-                { symbol: 'BTC/USDT', price: '43,215.00', change: '+2.34%', icon: '/images/crypto-icons/btc.png' },
-                { symbol: 'ETH/USDT', price: '2,245.80', change: '-1.20%', icon: '/images/crypto-icons/eth.png' },
-                { symbol: 'BNB/USDT', price: '312.45', change: '+1.85%', icon: '/images/crypto-icons/bnb.png' },
-                { symbol: 'YAS/USDT', price: '0.95', change: '+8.25%', icon: '/images/crypto-icons/yas.png' },
-                { symbol: 'DOGE/USDT', price: '0.0815', change: '+3.45%', icon: '/images/crypto-icons/doge.png' },
-                { symbol: 'SOL/USDT', price: '102.35', change: '+5.67%', icon: '/images/crypto-icons/sol.png' },
-                { symbol: 'SHIB/USDT', price: '0.00002234', change: '+2.89%', icon: '/images/crypto-icons/shib.png' },
-                { symbol: 'PEPE/USDT', price: '0.000001234', change: '+12.45%', icon: '/images/crypto-icons/pepe.png' },
-                { symbol: 'KLC/USDT', price: '1.85', change: '+5.67%', icon: '/images/crypto-icons/klc.png' },
-                { symbol: 'KSWAP/USDT', price: '2.15', change: '-0.85%', icon: '/images/crypto-icons/kswap.png' },
-                { symbol: 'AAVE/USDT', price: '89.45', change: '+4.32%', icon: '/images/crypto-icons/aave.png' },
-                { symbol: 'TON/USDT', price: '2.45', change: '+6.78%', icon: '/images/crypto-icons/ton.png' },
-                // Second set
-                { symbol: 'BTC/USDT', price: '43,215.00', change: '+2.34%', icon: '/images/crypto-icons/btc.png' },
-                { symbol: 'ETH/USDT', price: '2,245.80', change: '-1.20%', icon: '/images/crypto-icons/eth.png' },
-                { symbol: 'BNB/USDT', price: '312.45', change: '+1.85%', icon: '/images/crypto-icons/bnb.png' },
-                { symbol: 'YAS/USDT', price: '0.95', change: '+8.25%', icon: '/images/crypto-icons/yas.png' },
-                { symbol: 'DOGE/USDT', price: '0.0815', change: '+3.45%', icon: '/images/crypto-icons/doge.png' },
-                { symbol: 'SOL/USDT', price: '102.35', change: '+5.67%', icon: '/images/crypto-icons/sol.png' },
-                { symbol: 'SHIB/USDT', price: '0.00002234', change: '+2.89%', icon: '/images/crypto-icons/shib.png' },
-                { symbol: 'PEPE/USDT', price: '0.000001234', change: '+12.45%', icon: '/images/crypto-icons/pepe.png' },
-                { symbol: 'KLC/USDT', price: '1.85', change: '+5.67%', icon: '/images/crypto-icons/klc.png' },
-                { symbol: 'KSWAP/USDT', price: '2.15', change: '-0.85%', icon: '/images/crypto-icons/kswap.png' },
-                { symbol: 'AAVE/USDT', price: '89.45', change: '+4.32%', icon: '/images/crypto-icons/aave.png' },
-                { symbol: 'TON/USDT', price: '2.45', change: '+6.78%', icon: '/images/crypto-icons/ton.png' },
-                // Third set
-                { symbol: 'BTC/USDT', price: '43,215.00', change: '+2.34%', icon: '/images/crypto-icons/btc.png' },
-                { symbol: 'ETH/USDT', price: '2,245.80', change: '-1.20%', icon: '/images/crypto-icons/eth.png' },
-                { symbol: 'BNB/USDT', price: '312.45', change: '+1.85%', icon: '/images/crypto-icons/bnb.png' },
-                { symbol: 'YAS/USDT', price: '0.95', change: '+8.25%', icon: '/images/crypto-icons/yas.png' },
-                { symbol: 'DOGE/USDT', price: '0.0815', change: '+3.45%', icon: '/images/crypto-icons/doge.png' },
-                { symbol: 'SOL/USDT', price: '102.35', change: '+5.67%', icon: '/images/crypto-icons/sol.png' },
-                { symbol: 'SHIB/USDT', price: '0.00002234', change: '+2.89%', icon: '/images/crypto-icons/shib.png' },
-                { symbol: 'PEPE/USDT', price: '0.000001234', change: '+12.45%', icon: '/images/crypto-icons/pepe.png' },
-                { symbol: 'KLC/USDT', price: '1.85', change: '+5.67%', icon: '/images/crypto-icons/klc.png' },
-                { symbol: 'KSWAP/USDT', price: '2.15', change: '-0.85%', icon: '/images/crypto-icons/kswap.png' },
-                { symbol: 'AAVE/USDT', price: '89.45', change: '+4.32%', icon: '/images/crypto-icons/aave.png' },
-                { symbol: 'TON/USDT', price: '2.45', change: '+6.78%', icon: '/images/crypto-icons/ton.png' }
-              ].map((crypto, index) => (
-                <div key={`${crypto.symbol}-${index}`} className="flex items-center space-x-2 px-8 text-sm">
-                  <Image
-                    src={crypto.icon}
-                    alt={crypto.symbol.split('/')[0]}
-                    width={20}
-                    height={20}
-                    className="rounded-full"
-                  />
-                  <span className="font-medium text-zinc-300">{crypto.symbol}</span>
-                  <span className="text-zinc-400">${crypto.price}</span>
-                  <span className={crypto.change.startsWith('+') ? 'text-green-500' : 'text-red-500'}>
-                    {crypto.change}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+        <LivePriceTicker />
 
         {/* TradingView Chart Section */}
         <section className="container py-8">
@@ -269,178 +137,7 @@ export default function Home() {
 
         {/* Market Overview Section */}
         <section className="container py-8">
-          <div className="glass-dark rounded-2xl p-6">
-            <h2 className="text-2xl font-bold text-center mb-6">Popular Markets</h2>
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="border-b">
-                    <th className="px-4 py-3 text-left">Currency</th>
-                    <th className="px-4 py-3 text-right">Price</th>
-                    <th className="px-4 py-3 text-right">24h Change</th>
-                    <th className="px-4 py-3 text-right">24h Volume</th>
-                    <th className="px-4 py-3 text-right">Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-b hover:bg-muted/80">
-                    <td className="px-4 py-3">
-                      <div className="flex items-center space-x-2">
-                        <Image
-                          src="/images/crypto-icons/btc.png"
-                          alt="BTC"
-                          width={24}
-                          height={24}
-                          className="rounded-full"
-                        />
-                        <span>BTC/USDT</span>
-                      </div>
-                    </td>
-                    <td className="px-4 py-3 text-right">$43,215.00</td>
-                    <td className="px-4 py-3 text-right text-green-500">+2.34%</td>
-                    <td className="px-4 py-3 text-right">$24.5B</td>
-                    <td className="px-4 py-3 text-right">
-                      <Button size="sm" variant="outline" asChild>
-                        <Link href="/account/trade/BTC-USDT">Trade</Link>
-                      </Button>
-                    </td>
-                  </tr>
-                  <tr className="border-b hover:bg-muted/80">
-                    <td className="px-4 py-3">
-                      <div className="flex items-center space-x-2">
-                        <Image
-                          src="/images/crypto-icons/eth.png"
-                          alt="ETH"
-                          width={24}
-                          height={24}
-                          className="rounded-full"
-                        />
-                        <span>ETH/USDT</span>
-                      </div>
-                    </td>
-                    <td className="px-4 py-3 text-right">$2,245.80</td>
-                    <td className="px-4 py-3 text-right text-red-500">-1.20%</td>
-                    <td className="px-4 py-3 text-right">$12.8B</td>
-                    <td className="px-4 py-3 text-right">
-                      <Button size="sm" variant="outline" asChild>
-                        <Link href="/account/trade/ETH-USDT">Trade</Link>
-                      </Button>
-                    </td>
-                  </tr>
-                  <tr className="border-b hover:bg-muted/80">
-                    <td className="px-4 py-3">
-                      <div className="flex items-center space-x-2">
-                        <Image
-                          src="/images/crypto-icons/bnb.png"
-                          alt="BNB"
-                          width={24}
-                          height={24}
-                          className="rounded-full"
-                        />
-                        <span>BNB/USDT</span>
-                      </div>
-                    </td>
-                    <td className="px-4 py-3 text-right">$312.45</td>
-                    <td className="px-4 py-3 text-right text-green-500">+1.85%</td>
-                    <td className="px-4 py-3 text-right">$1.2B</td>
-                    <td className="px-4 py-3 text-right">
-                      <Button size="sm" variant="outline" asChild>
-                        <Link href="/account/trade/BNB-USDT">Trade</Link>
-                      </Button>
-                    </td>
-                  </tr>
-                  <tr className="border-b hover:bg-muted/80">
-                    <td className="px-4 py-3">
-                      <div className="flex items-center space-x-2">
-                        <Image
-                          src="/images/crypto-icons/trx.png"
-                          alt="TRX"
-                          width={24}
-                          height={24}
-                          className="rounded-full"
-                        />
-                        <span>TRX/USDT</span>
-                      </div>
-                    </td>
-                    <td className="px-4 py-3 text-right">$0.1123</td>
-                    <td className="px-4 py-3 text-right text-green-500">+3.45%</td>
-                    <td className="px-4 py-3 text-right">$245.6M</td>
-                    <td className="px-4 py-3 text-right">
-                      <Button size="sm" variant="outline" asChild>
-                        <Link href="/account/trade/TRX-USDT">Trade</Link>
-                      </Button>
-                    </td>
-                  </tr>
-                  <tr className="border-b hover:bg-muted/80">
-                    <td className="px-4 py-3">
-                      <div className="flex items-center space-x-2">
-                        <Image
-                          src="/images/crypto-icons/klc.png"
-                          alt="KLC"
-                          width={24}
-                          height={24}
-                          className="rounded-full"
-                        />
-                        <span>KLC/USDT</span>
-                      </div>
-                    </td>
-                    <td className="px-4 py-3 text-right">$1.85</td>
-                    <td className="px-4 py-3 text-right text-green-500">+5.67%</td>
-                    <td className="px-4 py-3 text-right">$12.4M</td>
-                    <td className="px-4 py-3 text-right">
-                      <Button size="sm" variant="outline" asChild>
-                        <Link href="/account/trade/KLC-USDT">Trade</Link>
-                      </Button>
-                    </td>
-                  </tr>
-                  <tr className="border-b hover:bg-muted/80">
-                    <td className="px-4 py-3">
-                      <div className="flex items-center space-x-2">
-                        <Image
-                          src="/images/crypto-icons/yas.png"
-                          alt="YAS"
-                          width={24}
-                          height={24}
-                          className="rounded-full"
-                        />
-                        <span>YAS/USDT</span>
-                      </div>
-                    </td>
-                    <td className="px-4 py-3 text-right">$0.95</td>
-                    <td className="px-4 py-3 text-right text-green-500">+8.25%</td>
-                    <td className="px-4 py-3 text-right">$5.2M</td>
-                    <td className="px-4 py-3 text-right">
-                      <Button size="sm" variant="outline" asChild>
-                        <Link href="/account/trade/YAS-USDT">Trade</Link>
-                      </Button>
-                    </td>
-                  </tr>
-                  <tr className="border-b hover:bg-muted/80">
-                    <td className="px-4 py-3">
-                      <div className="flex items-center space-x-2">
-                        <Image
-                          src="/images/crypto-icons/kswap.png"
-                          alt="KSWAP"
-                          width={24}
-                          height={24}
-                          className="rounded-full"
-                        />
-                        <span>KSWAP/USDT</span>
-                      </div>
-                    </td>
-                    <td className="px-4 py-3 text-right">$2.15</td>
-                    <td className="px-4 py-3 text-right text-red-500">-0.85%</td>
-                    <td className="px-4 py-3 text-right">$8.7M</td>
-                    <td className="px-4 py-3 text-right">
-                      <Button size="sm" variant="outline" asChild>
-                        <Link href="/account/trade/KSWAP-USDT">Trade</Link>
-                      </Button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
+          <MarketOverview />
         </section>
 
         {/* Features Section */}
