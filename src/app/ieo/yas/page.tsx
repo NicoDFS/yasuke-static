@@ -169,6 +169,39 @@ export default function YASTokenDetails() {
                     <p className="text-sm text-zinc-400">Launch Date</p>
                     <p className="font-semibold">Q1 2025</p>
                   </div>
+                  <div className="pt-2 space-y-2">
+                    <p className="text-sm text-zinc-400">Smart Contracts</p>
+                    <Button 
+                      variant="outline" 
+                      size="sm"
+                      className="w-full bg-[#1d1e24] hover:bg-zinc-800 text-xs" 
+                      asChild
+                    >
+                      <Link 
+                        href="https://kalyscan.io/address/0x8368b675593597e37a57D12546CCbfBD3f2A457d?tab=contract" 
+                        target="_blank"
+                        className="flex items-center justify-between"
+                      >
+                        <span>Yasuke Token</span>
+                        <span className="text-zinc-400">View on Explorer</span>
+                      </Link>
+                    </Button>
+                    <Button 
+                      variant="outline" 
+                      size="sm"
+                      className="w-full bg-[#1d1e24] hover:bg-zinc-800 text-xs" 
+                      asChild
+                    >
+                      <Link 
+                        href="https://kalyscan.io/address/0x020741e63C0722a07598E2f639aE34E8cd07abBd?tab=contract" 
+                        target="_blank"
+                        className="flex items-center justify-between"
+                      >
+                        <span>Yasuke Vesting</span>
+                        <span className="text-zinc-400">View on Explorer</span>
+                      </Link>
+                    </Button>
+                  </div>
                 </div>
               </div>
 

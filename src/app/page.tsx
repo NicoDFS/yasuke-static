@@ -84,7 +84,7 @@ export default function Home() {
                 <div className="space-y-4">
                   <div className="flex justify-between text-sm">
                     <span className="text-zinc-400">Initial Price</span>
-                    <span className="font-medium">$0.95</span>
+                    <span className="font-medium">$0.001</span>
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-zinc-400">Total Supply</span>
