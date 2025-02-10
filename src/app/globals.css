@@ -91,6 +91,15 @@
   }
 }
 
+@keyframes slower-ticker {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 @keyframes blob {
   0% {
     transform: translate(0px, 0px) scale(1);
@@ -113,6 +122,11 @@
 
 .animate-ticker {
   animation: ticker 120s linear infinite;
+  will-change: transform;
+}
+
+.animate-slower-ticker {
+  animation: slower-ticker 300s linear infinite;
   will-change: transform;
 }
 
