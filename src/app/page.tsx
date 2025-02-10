@@ -74,7 +74,7 @@ export default function Home() {
                     />
                     <div>
                       <div className="flex items-center gap-2">
-                        <h4 className="font-bold">YASUKE IEO</h4>
+                        <h4 className="font-bold">YASUKE CEX</h4>
                         <span className="px-2 py-0.5 text-xs font-medium bg-blue-500/20 text-blue-500 rounded-full">Coming Soon</span>
                       </div>
                       <p className="text-sm text-zinc-400">YAS/USDT</p>
@@ -95,7 +95,7 @@ export default function Home() {
                     <span className="font-medium">20%</span>
                   </div>
                   <Button className="w-full bg-[#1d1e24] text-zinc-100 hover:bg-[#1d1e24]/80" asChild>
-                    <Link href="/ieo/yas">Learn More</Link>
+                    <Link href="/about">Learn More</Link>
                   </Button>
                 </div>
               </div>
